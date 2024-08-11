@@ -11,6 +11,9 @@ class Book(db.Model):
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     updated_at = db.Column(db.DateTime, onupdate=db.func.current_timestamp())
 
+    def save_to_db(self):
+        pass
+
 def create_tables():
     with app.app_context():
         db.create_all()
