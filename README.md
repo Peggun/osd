@@ -27,6 +27,10 @@ or
 pip install -r requirements.txt
 ```
 This should install of the packages for the project.
+Now to get all of the data, you can run the scripts in the downloads folder. The names tell you what they download
+
+## Environment Variables
+In the files, there is a .env.example file. This is an example of a proper .env file. To modify the .env file, just make a copy of the .env.example folder and rename it to .env, and change the variables as you like. The main website when I host it with the first stable release, will be different and only known to me.
 
 # 4. Running
 Now onto the final step. To run the project, just run
