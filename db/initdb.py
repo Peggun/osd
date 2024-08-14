@@ -1,19 +1,25 @@
-from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 import os
 
-books_db_path = os.path.join(os.getcwd(), 'db', 'databases', 'books')
+books_db_path = os.path.join('db', 'databases', 'booksdb', 'books.db')
 
 db = None
 
 def init_db():
     from src.app.website import app
 
-    db = SQLAlchemy(app)
+    os.makedirs(os.path.dirname(books_db_path), exist_ok=True)
 
     app.config['SQLALCHEMY_BINDS'] = {
-        'books': 'sqlite:///{books_db_path}books.db'
+        'books': f'sqlite:///db/databases/booksdb'
     }
+    
+    print(app.config['SQLALCHEMY_BINDS']) # For seeing why the database is throwing errors. I plan to use binds to manage multiple databases
 
-    app.config['SQLALCHEMY_BINDS']['books'] = f'sqlite:///{books_db_path}'
+    db = SQLAlchemy(app)
+
+    with app.app_context():
+        db.create_all()
+
+    return db

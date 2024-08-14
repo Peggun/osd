@@ -12,6 +12,6 @@ def create_app():
     app.register_blueprint(home_blueprint)
     app.config.from_object(DevelopmentConfig)
 
-    init_db()
-
-    return app
+    db = init_db()
+    
+    return app, db
