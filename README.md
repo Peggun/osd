@@ -39,5 +39,8 @@ py run.py
 ```
 run.py contains all of the necessary code to initialise the app and the database.
 
-# 5. Contributing
+# 5. Issues
+If you have ran through any issues throughout this process. Please read [ISSUES.md](https://github.com/Peggun/osd/blob/main/ISSUES.md)
+
+# 6. Contributing
 If you would like to join and contribute to this project, please read [CONTRIBUTING.md](https://github.com/Peggun/osd/blob/main/CONTRIBUTING.md)
