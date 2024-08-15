@@ -1,3 +1,7 @@
+<p align="center">
+  <img alt="osd-icon" width=240x src="osd-icon.jpg" />
+</p>
+
 # osd (Open-Source Data)
 As a programmer myself, I have noticed when training AI's, I have to scour the internet for a file size that fits my recommended size. But here at osd, you can have all sorts of data, for free anywhere to use. This is the Australian version, and I plan to introduce different countries to this project. osd has everything, from books, to datasets, to wiki pages. (some of which are still coming)
 
