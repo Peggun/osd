@@ -1,7 +1,9 @@
 # osd (Open-Source Data)
 As a programmer myself, I have noticed when training AI's, I have to scour the internet for a file size that fits my recommended size. But here at osd, you can have all sorts of data, for free anywhere to use. This is the Australian version, and I plan to introduce different countries to this project. osd has everything, from books, to datasets, to wiki pages. 
 
-### DISCLAIMER: ALL FILES THAT ARE TO BE DOWNLOADED ALL FOLLOW THE [AUSTRALIAN COPYRIGHT LAW](https://www.alrc.gov.au/publication/genes-and-ingenuity-gene-patenting-and-human-health-alrc-report-99/28-copyright-and-databases/copyright-law/) AND [AUSTRALIAN PUBLIC DOMAIN](https://www.nla.gov.au/stories/news/2024/public-domain-2024). IF YOU ARE BASED OUTSIDE OF AUSTRALIA, YOU ARE RISKING GRAVE CONSEQUENCES BY DOWNLOADING DATA. PLEASE CHECK THE COPYRIGHT LAWS AND PUBLIC DOMAIN LAWS IN YOUR COUNTRY TO ENSURE YOU ARE UNDER THE LAW. WE ARE NOT AT FAULT FOR PEOPLE DOWNLOADING DATA FROM OUTSIDE AUSTRALIA.
+### DISCLAIMER: ALL FILES THAT ARE TO BE DOWNLOADED ALL FOLLOW THE [AUSTRALIAN COPYRIGHT LAW](https://www.alrc.gov.au/publication/genes-and-ingenuity-gene-patenting-and-human-health-alrc-report-99/28-copyright-and-databases/copyright-law/) AND [AUSTRALIAN PUBLIC DOMAIN](https://www.nla.gov.au/stories/news/2024/public-domain-2024). IF YOU ARE BASED OUTSIDE OF AUSTRALIA, YOU ARE RISKING GRAVE CONSEQUENCES BY DOWNLOADING DATA. PLEASE CHECK THE COPYRIGHT LAWS AND PUBLIC DOMAIN LAWS IN YOUR COUNTRY TO ENSURE YOU ARE UNDER THE LAW. WE ARE NOT AT FAULT FOR PEOPLE DOWNLOADING DATA FROM OUTSIDE AUSTRALIA. HOWEVER, THERE ARE SOME DATA THAT YOU CAN DOWNLOAD, BESIDE EBOOKS AND MORE THAT ARE COPYRIGHTED. PLEASE CONTINUE AT YOUR OWN RISK.
+
+If you are based outside of Australia, you are welcome to download and contribute different data by opening an issue and welcomed to try out some ideas you have in mind
 
 Here are the steps to download and contribute to the project. 
 
