@@ -11,11 +11,11 @@ def init_db():
 
     os.makedirs(os.path.dirname(books_db_path), exist_ok=True)
 
-    app.config['SQLALCHEMY_BINDS'] = {
-        'books': f'sqlite:///db/databases/booksdb'
-    }
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///default.db' # This works fine.
+
+    app.config['SQLALCHEMY_BINDS'] = {'books': 'sqlite:///../db/databases/booksdb/books.db'}
     
-    print(app.config['SQLALCHEMY_BINDS']) # For seeing why the database is throwing errors. I plan to use binds to manage multiple databases
+    #print(app.config['SQLALCHEMY_BINDS']) # For seeing why the database is throwing errors. I plan to use binds to manage multiple databases
 
     db = SQLAlchemy(app)
 
