@@ -15,6 +15,7 @@ Here are the steps to download and contribute to the project.
 You will need the following for this project
 - Python IDE (for example, Visual Studio Code)
 - Python 3.12+
+- Git
 
 # 2. Cloning
 You will need to clone the files. Use
