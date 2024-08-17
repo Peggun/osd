@@ -1,5 +1,10 @@
 <p align="center">
-  <img alt="osd-icon" width=240x src="osd-icon.jpg" />
+  <img alt="osd-icon" width=240x src="osd-icon.jpeg" />
+</p>
+
+<p align="center">
+  <a style="text-decoration:none" href="https://discord.gg/wYYj32TuQW">
+    <img src="https://img.shields.io/discord/725513575971684472?label=Discord&color=7289da" alt="osd Discord" /></a>
 </p>
 
 # osd (Open-Source Data)
