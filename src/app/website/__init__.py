@@ -1,5 +1,7 @@
 from flask import Flask
 from config import Config, DevelopmentConfig, ProductionConfig
+import sentry_sdk
+import os
 
 from .routes.home_page.home_route import home as home_blueprint
 
