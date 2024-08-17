@@ -4,7 +4,7 @@
 
 <p align="center">
   <a style="text-decoration:none" href="https://discord.gg/wYYj32TuQW">
-    <img src="https://img.shields.io/discord/725513575971684472?label=Discord&color=7289da" alt="osd Discord" /></a>
+    <img src="https://img.shields.io/discord/1273599169327665214?label=Discord&color=7289da" alt="osd Discord" /></a>
 </p>
 
 # osd (Open-Source Data)
