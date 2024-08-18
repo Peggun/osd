@@ -8,6 +8,7 @@ def redirect_to_home():
 
 @home.route('/home')
 def home_page():
+    1/0
     return "Hello there again"
 
 @home.route('/test')

@@ -12,6 +12,9 @@ if platform.system() == 'Windows':
 
     print(result.stdout)
 
+    if result.stderr:
+        print(result.stderr)
+
     server_process.terminate()
 
 else:
