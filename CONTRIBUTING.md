@@ -5,13 +5,13 @@ If you would like to contribute to this project please read the details below
 Please make sure that your code is readable, and efficient. And all files made are to be put into folders that help with the organisation of the project.
 
 # 2. Packages
-If you need to install a package for your idea or solution, feel free to install it. However, after you install it, you need to update the requirements.txt by running
+If you need to install a package for your idea or solution, feel free to install it. However, after you install it, you need to update the requirements.txt by running one of these commands based on your OS
 ```sh
-py -m pip freeze > requirements.txt
+py -m pip freeze > win-requirements.txt or linux-mac-requirements
 ```
 or
 ```sh
-pip freeze > requirements.txt
+pip freeze > win-requirements.txt or linux-mac-requirements.txt
 ```
 
 # 3. Pull Requests
