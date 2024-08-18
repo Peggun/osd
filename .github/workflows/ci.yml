@@ -17,4 +17,4 @@ jobs:
         pip install -r linux-mac-requirements.txt
     - name: Run tests
       run: |
-        py run_tests.py
+        python run_tests.py
