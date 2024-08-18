@@ -1,12 +1,26 @@
 import subprocess
 import time
+import platform
 
-server_process = subprocess.Popen(['py', 'run.py'])
+if platform.system() == 'Windows':
 
-time.sleep(5)
+    server_process = subprocess.Popen(['py', 'run.py'])
 
-result = subprocess.run(['pytest'], capture_output=True, text=True)
+    time.sleep(5)
 
-print(result.stdout)
+    result = subprocess.run(['pytest'], capture_output=True, text=True)
 
-server_process.terminate()
+    print(result.stdout)
+
+    server_process.terminate()
+
+else:
+    server_process = subprocess.Popen(['python', 'run.py'])
+
+    time.sleep(5)
+
+    result = subprocess.run(['pytest'], capture_output=True, text=True)
+
+    print(result.stdout)
+
+    server_process.terminate()
