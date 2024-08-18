@@ -5,6 +5,8 @@
 <p align="center">
   <a style="text-decoration:none" href="https://discord.gg/wYYj32TuQW">
     <img src="https://img.shields.io/discord/1273599169327665214?label=Discord&color=7289da" alt="osd Discord" /></a>
+  <a style="text-decoration:none" href="https://github.com/Peggun/osd/action/workflows/ci.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/Peggun/osd/ci.yml?label=osd%20CI" alt="osd CI" /></a>
 </p>
 
 # osd (Open-Source Data)
@@ -31,12 +33,17 @@ This gets all of the files and ready to set up all of the packages.
 
 # 3. Setting Up
 When you have opened up the project folder, you should see a requirements.txt file. This contains all of the packages needed for this project to run. To install all of them, run
+- Windows
 ```sh
-py -m pip install -r requirements.txt
+py -m pip install -r win-requirements.txt
 ```
 or 
 ```sh
-pip install -r requirements.txt
+pip install -r win-requirements.txt
+```
+- Linux & MacOS
+```sh
+python -m pip install linux-mac-requirements.txt
 ```
 This should install of the packages for the project.
 Now to get all of the data, you can run the scripts in the downloads folder. The names tell you what they download
