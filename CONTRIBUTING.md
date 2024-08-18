@@ -20,8 +20,12 @@ Like what you would expect, I would go through all of the code changes in each p
 # 4. Task Board
 There will be a task board open for everybody to see. It will contain all of the stuff for what to do is this project, making sure that everybody knows what they are doing.
 
-# 5. Contact
+# 5. Tests
+There is a test runner file called run_tests.py. All you need to do is make sure that all of the files you would like to test and the functions needed to test are put into the tests/ folder and organised nicely. The test framework that osd uses is Pytest so for the run_tests.py to work, Pytest needs to find those files. There is also a build workflow that will also go through and double check if the build works or fails.
+
+# 6. Contact
 You will be able to contact me through a variety of social medias. The main ones will include my email and my personal discord, along with being able to contact others within the project.
 - Discord (ejorghine)
 - Email (peggundev@gmail.com)
+- Public Discord Server (see top of [README.md](https://github.com/Peggun/osd))
 Please feel free to email me about any questions or anything about this project.
