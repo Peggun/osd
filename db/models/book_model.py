@@ -1,6 +1,12 @@
-from db.initdb import db
+import os
+import sys
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+from run import db
 from src.app.website import app
 
+# Model for books to be able to parse into database.
 class Book(db.Model):
     __bind_key__ = 'books'
     __tablename__ = 'books'
@@ -12,9 +18,5 @@ class Book(db.Model):
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     updated_at = db.Column(db.DateTime, onupdate=db.func.current_timestamp())
 
-    def save_to_db(self):
-        pass
-
-def create_tables():
-    with app.app_context():
-        db.create_all()
+    def __repr__(self):
+        return f"<Book {self.title}"

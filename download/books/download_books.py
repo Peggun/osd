@@ -2,6 +2,8 @@ import os
 import requests
 from bs4 import BeautifulSoup
 
+# Downloads all of the ebooks stored at Project Gutenberg AU.
+
 def download_books():
     book_file_paths = '../../src/data/books/'
 
@@ -34,11 +36,11 @@ def download_books():
         for book_link in links:
             book_name_ft = book_link.split('/')[-1]  # Extract the file name from the URL
 
-            # Extract the book's base name (without extension)
+            # Strip any trailing "h" from the book name before determining the folder
             if book_name_ft.endswith('.txt'):
-                book_name = book_name_ft.split('.txt')[0]
+                book_name = book_name_ft.split('.txt')[0].rstrip('h')
             elif book_name_ft.endswith('.html'):
-                book_name = book_name_ft.split('.html')[0]
+                book_name = book_name_ft.split('.html')[0].rstrip('h')
 
             # Check if the book name already exists in the dictionary
             if book_name in book_names:

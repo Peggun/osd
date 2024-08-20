@@ -2,8 +2,11 @@ from src.app.website import create_app
 import socket
 import os
 import sentry_sdk
-import threading
 from sentry_sdk.integrations.flask import FlaskIntegration
+from datetime import datetime
+from logger.logger import Logger, LogLevels
+
+Logger.log(f"Script started", LogLevels.DEBUG)
 
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
@@ -15,16 +18,14 @@ def before_send(event, hint):
         exc_type, exc_value, _ = hint['exc_info']
         if isinstance(exc_value, OSError) and exc_value.winerror == 10038:
             return None
+        if isinstance(exc_value, KeyboardInterrupt):
+            return None
         return event
 
+# Initalises SentryIO for Github.
 sentry_sdk.init(
     dsn=os.environ.get('SENTRY_IO_DSN'),
-    # Set traces_sample_rate to 1.0 to capture 100%
-    # of transactions for tracing.
     traces_sample_rate=1.0,
-    # Set profiles_sample_rate to 1.0 to profile 100%
-    # of sampled transactions.
-    # We recommend adjusting this value in production.
     profiles_sample_rate=1.0,
     before_send=before_send,
     integrations=[FlaskIntegration()]
@@ -32,10 +33,9 @@ sentry_sdk.init(
 
 if __name__ == '__main__':
     try:
-        server_thread=threading.Thread(target=app.run(debug=True, host=ip_addr))
-        server_thread.start()
-        server_thread.join()
+        Logger.log(f"Server starting... (Host: {ip_addr})", LogLevels.DEBUG)
+        app.run(debug=True, host=ip_addr) # Run the server.
     except KeyboardInterrupt:
-        print("Shutting server down...")
+        Logger.log("Shutting server down...", LogLevels.INFO)
     finally:
-        pass
+        Logger.log("Server has been shut down.", LogLevels.INFO)

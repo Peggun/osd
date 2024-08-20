@@ -3,6 +3,8 @@ import time
 import sys
 import platform
 
+# Runs the tests as you need multiple threads. One to run the server, and one to run pytest.
+
 if platform.system() == 'Windows':
 
     server_process = subprocess.Popen(['py', 'run.py'])
