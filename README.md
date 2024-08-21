@@ -43,7 +43,7 @@ pip install -r win-requirements.txt
 ```
 - Linux & MacOS
 ```sh
-python -m pip install linux-mac-requirements.txt
+python -m pip install -r linux-mac-requirements.txt
 ```
 This should install of the packages for the project.
 Now to get all of the data, you can run the scripts in the downloads folder. The names tell you what they download
