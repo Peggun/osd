@@ -10,7 +10,7 @@ If you were using the win-requirements.txt file, please swap to the linux-mac-re
 ## 2. OS Problems
 ### externally-managed-environment
 If you are running Linux and are running into the externally-managed-environment error when trying to install the pip packages. All you need to do is at the end of the command, add the
-```
+```sh
 --break-system-packages
 ```
 flag and all should go well.

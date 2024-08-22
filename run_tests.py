@@ -5,13 +5,13 @@ import platform
 
 # Runs the tests as you need multiple threads. One to run the server, and one to run pytest.
 
-if platform.system() == 'Windows':
+if platform.system() == "Windows":
 
-    server_process = subprocess.Popen(['py', 'run.py'])
+    server_process = subprocess.Popen(["py", "run.py"])
 
     time.sleep(5)
 
-    result = subprocess.run(['pytest'], capture_output=True, text=True)
+    result = subprocess.run(["pytest"], capture_output=True, text=True)
     print(result.stdout)
 
     if result.stderr:
@@ -24,11 +24,11 @@ if platform.system() == 'Windows':
     sys.exit()
 
 else:
-    server_process = subprocess.Popen(['python', 'run.py'])
+    server_process = subprocess.Popen(["python", "run.py"])
 
     time.sleep(5)
 
-    result = subprocess.run(['pytest'], capture_output=True, text=True)
+    result = subprocess.run(["pytest"], capture_output=True, text=True)
 
     print(result.stdout)
 

@@ -13,28 +13,30 @@ ip_addr = socket.gethostbyname(hostname)
 
 app, db = create_app()
 
+
 def before_send(event, hint):
-    if 'exc_info' in hint:
-        exc_type, exc_value, _ = hint['exc_info']
+    if "exc_info" in hint:
+        exc_type, exc_value, _ = hint["exc_info"]
         if isinstance(exc_value, OSError) and exc_value.winerror == 10038:
             return None
         if isinstance(exc_value, KeyboardInterrupt):
             return None
         return event
 
+
 # Initalises SentryIO for Github.
 sentry_sdk.init(
-    dsn=os.environ.get('SENTRY_IO_DSN'),
+    dsn=os.environ.get("SENTRY_IO_DSN"),
     traces_sample_rate=1.0,
     profiles_sample_rate=1.0,
     before_send=before_send,
-    integrations=[FlaskIntegration()]
+    integrations=[FlaskIntegration()],
 )
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         Logger.log(f"Server starting... (Host: {ip_addr})", LogLevels.DEBUG)
-        app.run(debug=True, host=ip_addr) # Run the server.
+        app.run(debug=True, host=ip_addr)  # Run the server.
     except KeyboardInterrupt:
         Logger.log("Shutting server down...", LogLevels.INFO)
     finally:

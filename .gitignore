@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 
 src/data/books
+src/data/corpura

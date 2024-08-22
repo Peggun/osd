@@ -14,18 +14,21 @@ log_file = os.path.join(base_dir, "../logs", f"{today}.log")
 os.makedirs(os.path.dirname(log_file), exist_ok=True)
 
 logger.add(
-    log_file, 
-    format="{time:YYYY-MM-DD at HH:mm:ss} | {level} | {message}", 
-    level="DEBUG", 
-    rotation="100 MB", 
-    compression="zip", 
-    retention="10 days"
+    log_file,
+    format="{time:YYYY-MM-DD at HH:mm:ss} | {level} | {message}",
+    level="DEBUG",
+    rotation="100 MB",
+    compression="zip",
+    retention="10 days",
 )
+
 
 class LogLevels(Enum):
     INFO = 1
     DEBUG = 2
-    ERROR = 3
+    WARNING = 3
+    ERROR = 4
+
 
 class Logger:
 
@@ -42,5 +45,7 @@ class Logger:
             logger.info(message)
         elif level == LogLevels.DEBUG:
             logger.debug(message)
+        elif level == LogLevels.WARNING:
+            logger.warning(message)
         elif level == LogLevels.ERROR:
             logger.error(message)

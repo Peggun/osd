@@ -8,17 +8,15 @@ sys.path.append(
 from run import db
 
 
-# Model for books to be able to parse into database.
-class Book(db.Model):
-    __bind_key__ = "books"
-    __tablename__ = "books"
+class Corpus(db.Model):
+    __bind_key__ = "corpura"
+    __tablename__ = "corpura"
     id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(150), nullable=False)
-    author = db.Column(db.String(150), nullable=False)
-    description = db.Column(db.Text, nullable=True)
+    name = db.Column(db.String(150), nullable=False)
     file_path = db.Column(db.String(200), nullable=False)
+    zip_file_path = db.Column(db.String(200), nullable=True)
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     updated_at = db.Column(db.DateTime, onupdate=db.func.current_timestamp())
 
     def __repr__(self):
-        return f"<Book {self.title}"
+        return f"<Corpus {self.title}"
