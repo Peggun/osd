@@ -1,9 +1,10 @@
 from flask import Blueprint, render_template, redirect, url_for
 
+import pyhtmlify.HTMLTags.tags as tags
+
 home = Blueprint("home", __name__)
 
-# Just routes for the home page.
-
+# Just routes for the home page.l 
 
 @home.route("/")
 def redirect_to_home():
@@ -12,4 +13,4 @@ def redirect_to_home():
 
 @home.route("/home")
 def home_page():
-    return "Hello there again"
+    return render_template("home_page/html/html-home.html")

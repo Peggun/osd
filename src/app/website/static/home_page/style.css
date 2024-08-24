@@ -1,0 +1,179 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Use a more modern font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Slightly lighter background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(45deg, #333, #555); /* Gradient for a modern touch */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem; /* Larger font for emphasis */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px; /* More spacing for a cleaner look */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px; /* Rounded buttons for a modern look */
+    background: #444;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: #666;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+/* Main Content Styles */
+main {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #333; /* Underline for emphasis */
+    padding-bottom: 0.5rem;
+}
+
+section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #555; /* Softer text color for readability */
+}
+
+/* List Styles */
+ul {
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+    list-style: disc;
+    color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Subtle top shadow */
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background: #444;
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Button shadow for emphasis */
+}
+
+.btn:hover {
+    background: #666;
+    transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.image-container { 
+    height: 30px; /* Smaller size for the logos */
+    margin: 0 10px;
+}
+
+.image-container img {
+    height:100%;
+}
+
+.logo-container { 
+    width:100px;
+    height:100px;
+    text-align:center;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+.logo-container img {
+    height:100%;
+    border-radius: 25%;
+}
+
+.horizontal-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0; /* Removes default margin */
+    display: flex; /* Aligns items horizontally */
+    gap: 10px; /* Optional: adds spacing between items */
+    align-items: center; /* Centers items vertically */
+    justify-content: center; /* Centers items horizontally */
+    width: 100%; /* Makes sure the list takes the full width of the container */
+    position: absolute; /* Allows precise positioning */
+    top: 50%; /* Centers vertically in the viewport */
+    left: 50%; /* Centers horizontally in the viewport */
+    transform: translate(-50%, -50%); /* Offsets to truly center the list */
+}
+
+
+.horizontal-list li {
+    display: flex; /* Ensures the list items are treated as flex containers */
+    align-items: center; /* Centers content within each list item */
+}
+
+.horizontal-list img {
+    height: 24px; /* Adjust size as needed */
+    width: auto; /* Maintains aspect ratio */
+}
+
+.text-container {
+    padding-bottom: 100px; /* Adds space below the text container, adjust the value as needed */
+}

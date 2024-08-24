@@ -1,7 +1,5 @@
 from flask import Flask
 from config import Config, DevelopmentConfig, ProductionConfig
-import sentry_sdk
-import os
 
 from .routes.home_page.home_route import home as home_blueprint
 
@@ -12,7 +10,6 @@ def create_app():  # Creates the app for run.py to start.
 
     from db.initdb import (
         init_db,
-        books_db_path,
     )  # This stops the circular import from happening
 
     app.register_blueprint(home_blueprint)
