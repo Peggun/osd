@@ -3,16 +3,18 @@ If you would like to contribute to this project please read the details below
 
 # 1. Codebase
 Please make sure that your code is readable, and efficient. And all files made are to be put into folders that help with the organisation of the project.
+We use the [Black](https://github.com/psf/black) Python code formatter, please use this before pushing your code.
 
 # 2. Packages
-If you need to install a package for your idea or solution, feel free to install it. However, after you install it, you need to update the requirements.txt by running one of these commands based on your OS
+If you need to install a package for your idea or solution, feel free to install it. However, after you install it, you need to update the requirements.txt by running one of these commands based on your OS.
 ```sh
-py -m pip freeze > win-requirements.txt or linux-mac-requirements
+py -m pip freeze > win-requirements.txt and linux-mac-requirements
 ```
 or
 ```sh
-pip freeze > win-requirements.txt or linux-mac-requirements.txt
+pip freeze > win-requirements.txt and linux-mac-requirements.txt
 ```
+Make sure to go into the Linux Mac Requirements and remove the pywin32 packages.
 
 # 3. Pull Requests
 Like what you would expect, I would go through all of the code changes in each pull request. If I like it, it will go through, if it doesnt, or there is a better way to do it, I wont go through with it, however, I will also give feedback and ask questions about the request and the changes made, to make sure that it is the best for the community.

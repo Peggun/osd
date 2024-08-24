@@ -7,6 +7,8 @@
     <img src="https://img.shields.io/discord/1273599169327665214?label=Discord&color=7289da" alt="osd Discord" /></a>
   <a style="text-decoration:none" href="https://github.com/Peggun/osd/action/workflows/ci.yml">
     <img src="https://img.shields.io/github/actions/workflow/status/Peggun/osd/ci.yml?label=osd%20CI" alt="osd CI" /></a>
+  <a style="text-decoration:none" href="https://github.com/Peggun/pyhtml">
+    <img src="https://img.shields.io/badge/pyhtml-Github-orange" alt="pyhtml Repository" /></a>
 </p>
 
 # osd (Open-Source Data)
