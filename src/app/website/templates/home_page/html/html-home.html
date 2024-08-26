@@ -15,40 +15,47 @@
    <h1>
     OSD
    </h1>
-   <nav>
-    <ul>
-     <li>
-      <a href="#database">
-       Database
-      </a>
-     </li>
-     <li>
-      <a href="#features">
-       Features
-      </a>
-     </li>
-     <li>
-      <a href="#documentation">
-       Documentation
-      </a>
-     </li>
-     <li>
-      <a href="#community">
-       Community
-      </a>
-     </li>
-     <li>
-      <a href="#news">
-       News
-      </a>
-     </li>
-     <li>
-      <a href="#contact">
-       Contact
-      </a>
-     </li>
-    </ul>
-   </nav>
+   <div id="buttons">
+    <nav>
+     <ul>
+      <li>
+       <a href="/database" id="nav-database">
+        Database
+       </a>
+      </li>
+      <li>
+       <a href="#features" id="nav-features">
+        Features
+       </a>
+      </li>
+      <li>
+       <a href="/documentation" id="nav-documentation">
+        Documentation
+       </a>
+      </li>
+      <li>
+       <a href="/community" id="nav-community">
+        Community
+       </a>
+      </li>
+      <li>
+       <a href="#news" id="nav-news">
+        News
+       </a>
+      </li>
+      <li>
+       <a href="#contact" id="nav-contact">
+        Contact
+       </a>
+      </li>
+      <li>
+       <a href="/api" id="nav-api">
+        API
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </div>
   </header>
   <main>
    <section id="hero">
@@ -58,7 +65,7 @@
     <p>
      Your go-to resource for open-source data.
     </p>
-    <a class="btn" href="#get-started">
+    <a class="btn" href="#get-started" onclick="start_get_started()">
      Get Started
     </a>
    </section>
@@ -68,18 +75,18 @@
     </h2>
     <div class="feature">
      <h3>
-      Feature 1
+      API
      </h3>
      <p>
-      Description here.
+      Use the offical API of osd to pull any type of data! However, you will need to sign up for an api key to use for pulling data, but thats easy to do.
      </p>
     </div>
     <div class="feature">
      <h3>
-      Feature 2
+      A BIG database
      </h3>
      <p>
-      Description here.
+      The osd database is full of data from contributors and suggestions from our discord. You too could request to add some data, or add it yourself through contributing to our project!
      </p>
     </div>
    </section>
@@ -88,11 +95,27 @@
      Recent Updates
     </h2>
     <p>
-     Stay updated with the latest news and releases
+     Stay updated with the latest news and releases of the OSD Database, OSD API, and pyhtmlify.
     </p>
+    <div>
+     <h3>
+      Website development is a go!
+     </h3>
+     <p>
+      Development of the osd website has offically started! The website will go up and running with the first stable release. (Which is hopefully soon!)
+     </p>
+    </div>
+    <div>
+     <h3>
+      Pyhtmlify Release 0.1.6
+     </h3>
+     <p>
+      pyhtmlify 0.1.6 just got released! It features new improvements to the code side of things, and bug fixes, along with a html code beautifier.
+     </p>
+    </div>
    </section>
   </main>
-  <footer>
+  <footer id="contact">
    <p class="text-container">
     © 2024 OSD Project
    </p>
@@ -114,5 +137,9 @@
     </li>
    </ul>
   </footer>
+  <script src="/static/scripts/home_page/get_started.js">
+  </script>
+  <div class="overlay">
+  </div>
  </body>
 </html>

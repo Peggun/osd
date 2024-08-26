@@ -177,3 +177,77 @@ footer p {
 .text-container {
     padding-bottom: 100px; /* Adds space below the text container, adjust the value as needed */
 }
+
+/* Dark overlay for the entire page */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    display: none;
+}
+  
+/* Highlighted section */
+.highlighted {
+    position: relative;
+    z-index: 1100;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Improved Next button */
+.bottom-left-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1100;
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+  
+.bottom-left-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Tooltip Styles */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+    z-index: 2000; /* Ensure it appears above other content */
+    max-width: 200px; /* Limit the width */
+    font-size: 14px;
+}
+  
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Position below the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent; /* Arrow styling */
+
+} 
+
+.tooltip.show {
+    visibility: visible;
+}
+
