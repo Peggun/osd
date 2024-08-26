@@ -137,7 +137,7 @@ pydantic==2.8.2
 pydantic_core==2.20.1
 pyflakes==3.2.0
 Pygments==2.18.0
-pyhtmlify==0.1.0
+pyhtmlify==0.1.6
 pymongo==4.8.0
 pyparsing==3.1.2
 pyproject_hooks==1.1.0
