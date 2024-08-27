@@ -33,8 +33,11 @@ def index():
             tags.main(
                 tags.section(
                     tags.h2("Welcome to OSD"),
-                    tags.p("Your go-to resource for open-source data."),
-                    tags.a("Get Started", class_="btn", href="#get-started", onClick="start_get_started()"),
+                    tags.p("Your go-to resource for open-source data. Explore plenty of different data types and datasets to suit your need. Can't find what your looking for, please request it to our Discord where our team will try our best to add your data."),
+                    tags.if_tag("show_get_started",
+                                tags.div(
+                                    tags.button("Get Started", id="get-started-button", class_="btn")
+                                )),
                     id="hero"
                 ),
                 tags.section(
@@ -59,8 +62,8 @@ def index():
                         tags.p("Development of the osd website has offically started! The website will go up and running with the first stable release. (Which is hopefully soon!)")
                     ),
                     tags.div(
-                        tags.h3("Pyhtmlify Release 0.1.6"),
-                        tags.p("pyhtmlify 0.1.6 just got released! It features new improvements to the code side of things, and bug fixes, along with a html code beautifier.")
+                        tags.h3("Pyhtmlify Pre-Release 0.1.7a1"),
+                        tags.p("pyhtmlify 0.1.7a1 just got released! It features new improvements to the code side of things, and bug fixes, along with more tag support.")
                     ),
                     id="news",
                 )
