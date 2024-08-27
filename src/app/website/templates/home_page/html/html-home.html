@@ -63,11 +63,13 @@
      Welcome to OSD
     </h2>
     <p>
-     Your go-to resource for open-source data.
+     Your go-to resource for open-source data. Explore all types of data from ebooks to massive datasets of whatever you like. If you cannot find the type of data you would like, please contact us at our discord or Github.
     </p>
-    <a class="btn" href="#get-started" onclick="start_get_started()">
-     Get Started
-    </a>
+    {% if show_get_started %}
+        <div class="get-started-container">
+            <button id="get-started-button" class="btn" onclick="">Get Started</button>
+        </div>
+    {% endif %}
    </section>
    <section id="features">
     <h2>

@@ -60,7 +60,7 @@ function showTooltip(section, text) {
   const rect = section.getBoundingClientRect();
 
   // Position the tooltip near the section
-  tooltip.style.top = `${window.scrollY + rect.top - tooltip.offsetHeight - 10}px`;
+  tooltip.style.top = `${window.pageYOffset + rect.top - tooltip.offsetHeight - 10}px`;
   tooltip.style.left = `${rect.left + (rect.width / 2) - (tooltip.offsetWidth / 2)}px`;
 
   // Show the tooltip
@@ -77,5 +77,19 @@ function endTour() {
   // Remove the "Next" button
   document.querySelector('.bottom-left-button').remove();
 
-  window.location.replace('home')
+  // Set the cookie by making an AJAX request to Flask
+  fetch('/set_visited_cookie')
+      .then(response => response.json())
+      .then(data => {
+          if (data.status === 'success') {
+              console.log('Visited cookie set successfully');
+              // Reload the page to reflect the cookie setting
+              window.location.replace('/home');
+          }
+      })
+      .catch(error => console.error('Error setting cookie:', error));
 }
+
+
+// Attach the start_get_started function to the "Get Started" button click event
+document.querySelector('#get-started-button').addEventListener('click', start_get_started);
