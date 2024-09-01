@@ -20,4 +20,4 @@ def docs_api_reference():
 
 @docs.route("/contributing")
 def docs_contributing():
-    return "Contributing"
+    return render_template("documentation_page/html/html-docs-contributing.html")

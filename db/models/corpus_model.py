@@ -5,8 +5,7 @@ sys.path.append(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 )
 
-from run import db
-
+from db.db import db
 
 class Corpus(db.Model):
     __bind_key__ = "corpura"
@@ -19,4 +18,4 @@ class Corpus(db.Model):
     updated_at = db.Column(db.DateTime, onupdate=db.func.current_timestamp())
 
     def __repr__(self):
-        return f"<Corpus {self.title}"
+        return f"<Corpus {self.name}"

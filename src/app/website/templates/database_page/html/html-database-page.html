@@ -3,9 +3,11 @@
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   API Reference - OSD
+   Database Search
   </title>
-  <link href="../../../static/home_page/style.css" rel="stylesheet"/>
+  <link href="../../../static/database_page/style.css" rel="stylesheet"/>
+  <script src="/static/scripts/database_page/search.js">
+  </script>
  </head>
  <body>
   <header>
@@ -13,53 +15,45 @@
     <img alt="OSD Logo" src="../../../static/home_page/icons/osd-icon.jpeg"/>
    </div>
    <h1>
-    OSD - API Documentation
+    OSD Database
    </h1>
-   <div id="buttons">
-    <nav>
-     <ul>
-      <li>
-       <a href="/home">
-        Home
-       </a>
-      </li>
-      <li>
-       <a href="/docs/getting-started">
-        Getting Started
-       </a>
-      </li>
-      <li>
-       <a href="/contributing">
-        Contributing
-       </a>
-      </li>
-     </ul>
-    </nav>
-   </div>
+   <nav>
+    <ul>
+     <li>
+      <a href="/home">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="/docs/getting-started">
+       Getting Started
+      </a>
+     </li>
+     <li>
+      <a href="/api">
+       API
+      </a>
+     </li>
+     <li>
+      <a href="/contributing">
+       Contributing
+      </a>
+     </li>
+     <li>
+      <a href="/community">
+       Community
+      </a>
+     </li>
+    </ul>
+   </nav>
   </header>
   <main>
-   <section>
+   <section class="content">
     <h1>
-     API Reference
+     Database Search
     </h1>
-    <p>
-     Detailed API documentation for OSD.
-    </p>
-    <div>
-     <h2>
-      Endpoints
-     </h2>
-     <p>
-      Description of various API endpoints...
-     </p>
-    </div>
-    <div>
-     <h2>
-      Authentication
-     </h2>
-     <p>
-      Details on how to authenticate requests...
-     </p>
+    <input id="search-bar" placeholder="Search..." type="text"/>
+    <div class="results-container" id="results">
     </div>
    </section>
   </main>

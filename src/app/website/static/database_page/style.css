@@ -251,36 +251,42 @@ footer p {
     visibility: visible;
 }
 
-/* Contributing Section Styles */
-.contributing-sections {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem; /* Spacing between boxes */
-    justify-content: space-between;
-    margin-top: 2rem;
+/* Documentation Section */
+.doc-section {
+    margin-bottom: 1.5rem;
 }
 
-.contributing-box {
-    background: #f4f4f4;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow */
-    flex: 1;
-    min-width: 250px; /* Ensures boxes don't get too narrow */
-    transition: transform 0.3s ease;
-}
-
-.contributing-box:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-}
-
-.contributing-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+.doc-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
     color: #333;
 }
 
-.contributing-box p {
-    font-size: 1.1rem;
+.doc-section p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Results Container */
+.results-container {
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.result-item h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.result-item p {
+    font-size: 1rem;
     color: #555;
 }

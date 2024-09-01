@@ -96,9 +96,9 @@ def index():
                         ),
                     ),
                     tags.div(
-                        tags.h3("Pyhtmlify Pre-Release 0.1.7a1"),
+                        tags.h3("Pyhtmlify Release 0.1.8"),
                         tags.p(
-                            "pyhtmlify 0.1.7a1 just got released! It features new improvements to the code side of things, and bug fixes, along with more tag support."
+                            "pyhtmlify 0.1.8 just got released! It features new improvements to the code side of things, and bug fixes, along with more tag support."
                         ),
                     ),
                     id="news",

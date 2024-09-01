@@ -3,7 +3,6 @@ import socket
 import os
 import sentry_sdk
 from sentry_sdk.integrations.flask import FlaskIntegration
-from datetime import datetime
 from logger.logger import Logger, LogLevels
 
 Logger.log(f"Script started", LogLevels.DEBUG)
@@ -11,8 +10,7 @@ Logger.log(f"Script started", LogLevels.DEBUG)
 hostname = socket.gethostname()
 ip_addr = socket.gethostbyname(hostname)
 
-app, db = create_app()
-
+app, db = create_app()  # Now just returns the app, not db
 
 def before_send(event, hint):
     if "exc_info" in hint:
@@ -23,8 +21,7 @@ def before_send(event, hint):
             return None
         return event
 
-
-# Initalises SentryIO for Github.
+# Initializes SentryIO for Github.
 sentry_sdk.init(
     dsn=os.environ.get("SENTRY_IO_DSN"),
     traces_sample_rate=1.0,
